@@ -4,7 +4,7 @@
  *
  */
 
-
+var unicorn;
 /* Step 2
  *
  * Declare a variable named "videogame_system"
@@ -12,6 +12,7 @@
  *
  */
 
+var videogame_system = "Atari";
 
 /* Step 3
  *
@@ -19,7 +20,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+sahara_animal = "The Addax";
 
 /* Step 4
  *
@@ -28,7 +29,7 @@
  * each planet in our solar system
  *
  */
-
+var planets = ["mercury", "venus","earth","mars","jupiter","saturn","uranus","neptune"];
 
 
 /* Step 5
@@ -39,7 +40,7 @@
  *
  */
 
-
+var galilean_moons = ["io","europa","ganymede","callisto"];
 
 /* Step 6 φ
  *
@@ -47,7 +48,7 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-
+var golden_ratio = 1.61803398874;
 
 
 /* Step 7
@@ -56,7 +57,7 @@
  * and assign the value of earths_water_composition to 0.71
  *
  */
-
+var earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -65,7 +66,7 @@
  *
  */
 
-
+var club_name = "Fight Club";
 
 /* Step 9
  *
@@ -77,7 +78,11 @@
  *   unknown => undefined
  */
 
-
+var Gender = {
+  female: "female",
+  male: "male",
+  unknown :undefined
+}
 
 /* Step 10
  *
@@ -91,7 +96,12 @@
  *   gender  => Gender.female
  * 
  */
-
+var princess_leia ={
+  name: "Leia Organa",
+  money: 890,
+  age: 20,
+  gender: Gender.female
+}
 
 
 
@@ -106,7 +116,12 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  * 
  */
-
+var domains ={
+  "ycombinator.com": "198.41.190.47",
+  "laughingsquid.com": "162.159.247.97",
+  "slumlordhosting.com": "198.61.179.126",
+  "jsonformatter.curiousconcept.com": "104.28.5.70"
+}
 
 
 
@@ -125,7 +140,16 @@
  *   Links      => "GPLv2+"
  * 
  */
-
+var browsers ={
+  Chrome: "google",
+  Chromium: "google",
+  Safari: "apple",
+  Opera: "opera",
+  Firefox: "mozilla",
+  Sleipnir: "fenrir",
+  Konqueror: "KDE",
+  Links: "GPLv2+"
+}
 
 
 
@@ -145,7 +169,17 @@
  *  isDouble  => true
  *
  */
+var rainbow={
+  red: "#F0280A",
+  orange: "#FF8800",
+  yellow: "#FFDD00",
+  green: "#51AB0C",
+  blue: "#1593ED",
+  indigo: "#5215ED",
+  violet: "#A915ED",
 
+  isDouble: true
+}
 
 
 /* Step 14
@@ -250,7 +284,9 @@
  * @return {String}
  *
  */
-
+function sahara_river(){
+  return "Nile River";
+}
 
 /* Step 21
  *
@@ -468,55 +504,79 @@
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+function Animal(species,gender){
+  this.species = species;
+  this.gender = gender;
+}
 /**
  * Vehicle class
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
-
+function Vehicle(make,model){
+  this.make = make;
+  this.model = model;
+}
 /**
  * Shape class
  * @param {number} sides The number of sides, should be greater than 3
  */
-
+function Shape(sides){
+  this.sides = sides;
+}
 /**
  * Box class
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-
+function Box(contents,isOpen){
+  this.contents = contents;
+  this.isOpen = isOpen;
+}
 /**
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+function Door(isOpen){
+  this.isOpen = isOpen;
+}
 /**
  * Shoe class
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-
+function Shoe(size,color){
+  this.size = size;
+  this.color = color;
+}
 /**
  * House class
  * @param {number} stories How many stories tall the house is
  */
-
+function House(stories){
+  this.stories = stories;
+}
 /**
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-
+function Lightbulb(isOn){
+  this.isOn = isOn;
+}
 /**
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+function Cookie(flavor){
+  this.flavor = flavor;
+}
 /**
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+function Meal(foods){
+  this.foods = foods;
+}
 /* Step 60
  *
  * Create a new instance of
@@ -524,44 +584,79 @@
  */
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal("Monkey");
+george.gender = "male";
+
+var nemo = new Animal("Fish");
+nemo.gender = "male";
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle("Honda");
+civic.model = "Civic";
+
+var forte = new Vehicle("KIA");
+forte.model = "Forte";
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape();
+square.sides = 4;
+
+var hexagon = new Shape();
+hexagon.sides = 6;
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox = new Box();
+catBox.contents = new Animal();
+catBox.contents.species = "Cat";
+catBox.isOpen = true;
+
+var christmasPresent = new Box();
+christmasPresent.contents = '';
+christmasPresent.isOpen = false;
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door();
+automaticDoor.isOpen = true;
+
+var bankVault = new Door();
+bankVault.isOpen = false;
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe();
+rubySlippers.size = 7;
+rubySlippers.color = "red";
+
+var dressShoes = new Shoe();
+dressShoes.size = 10;
+dressShoes.color = "black";
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory = new House();
+singleStory.stories = 1;
+
+var twoStory = new House();
+twoStory.stories = 2;
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb();
+incandescent.isOn = true;
+
+var halogen = new Lightbulb();
+halogen.isOn = false;
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie();
+chocolateChip.flavor = "chocolate";
+
+var gingerbread = new Cookie();
+gingerbread.flavor = "gingerbread";
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal();
+  breakfast.foods = "milk and cereal";
+
+var dinner = new Meal();
+dinner.foods = "fish and vegetables";
 
 /* Step 80
  *
