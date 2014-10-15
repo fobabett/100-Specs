@@ -660,8 +660,13 @@ var dinner = new Meal("fish and vegetables");
  *
  */
 Animal.prototype.isWarmBlooded = function(){
-  if(this.species = "Fish"){
+  if(this.species === "Fish"){
     return false;
+  }
+  if(this.species === "Moneky" && this.species === "Bird"){
+    return true;
+  } else {
+    return "Could not determine if warm-blooded";
   }
 
 };
@@ -697,7 +702,46 @@ Vehicle.prototype.drive = function(streetName) {
  * Any other number => "Could not determine type"
  *
  */
-
+Shape.prototype.getType = function() {
+  var type = '';
+    switch(this.sides) {
+    case 3: {
+      type = "triangle";
+      break;
+    }
+    case 4 : {
+      type = "quadrilateral";
+      break;
+    }
+    case 5 : {
+      type = "pentagon";
+      break;
+    }
+    case 6 : {
+      type = "hexagon";
+      break;
+    }
+    case 7 : {
+      type = "heptagon";
+      break;
+    }
+    case 8 : {
+      type = "octagon";
+      break;
+    }
+    case 9 : {
+      type = "nonagon";
+      break;
+    }
+    case 10 : {
+      type = "decagon";
+      break;
+    }
+    default:
+      type = "Could not determine type";
+  }
+  return type;
+};
 
 /* Step 84
  *
