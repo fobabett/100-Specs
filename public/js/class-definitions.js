@@ -923,8 +923,9 @@ var closeAnOpenBox = new Box("Meow", true).openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor = new Door(false).openClose();
+
+var closeAnOpenDoor = new Door(true).openClose();
 
 
 /* Step 96
