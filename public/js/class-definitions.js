@@ -116,11 +116,10 @@ var princess_leia ={
  * 
  */
 var domains = {
-  "ycombinatior.com": "198.41.190.47",
+  "ycombinator.com": "198.41.190.47",
   "laughingsquid.com": "162.159.247.97",
   "slumlordhosting.com": "198.61.179.126",
   "jsonformatter.curiousconcept.com": "104.28.5.70"
-
 }
 
 
@@ -170,14 +169,14 @@ var browsers ={
  *
  */
 var rainbow ={
-  colors:{
+  colors: {
     red: "#F0280A",
     orange: "#FF8800",
     yellow: "#FFDD00",
     green: "#51AB0C",
     blue: "#1593ED",
     indigo: "#5215ED",
-    violet: "#5215ED"
+    violet: "#A915ED"
   },
   isDouble: true
 }
@@ -663,7 +662,7 @@ Animal.prototype.isWarmBlooded = function(){
   if(this.species === "Fish"){
     return false;
   }
-  if(this.species === "Moneky" && this.species === "Bird"){
+  if(this.species === "Monkey" || this.species === "Bird"){
     return true;
   } else {
     return "Could not determine if warm-blooded";
@@ -877,9 +876,10 @@ Meal.prototype.containsJunkFood = function() {
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = new Animal("Bird").isWarmBlooded();
+
+var coldBloodedAnimal = new Animal("Fish").isWarmBlooded();
+var notWarmOrColdAnimal = new Animal("Idk").isWarmBlooded();
 
 
 /* Step 92
@@ -888,7 +888,7 @@ var notWarmOrColdAnimal;
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
+var streetDriving = new Vehicle();
 var forwardDriving;
 
 
@@ -898,7 +898,8 @@ var forwardDriving;
  * and assign the values to each variable below.
  *
  */
-var decagon;
+var decagon = new Shape();
+decagon.Shape.getType("decagon");
 var polygon;
 
 
