@@ -900,9 +900,10 @@ var forwardDriving = new Vehicle().drive();
  * and assign the values to each variable below.
  *
  */
-var decagon = new Shape();
-decagon.Shape.getType("decagon");
-var polygon;
+var decagon = new Shape(10).getType();
+
+var polygon = new Shape(12).getType();
+
 
 
 /* Step 94
