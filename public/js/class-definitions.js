@@ -751,7 +751,16 @@ Shape.prototype.getType = function() {
  * Return true if openBox opens the box, false otherwise.
  *
  */
-
+Box.prototype.openBox = function() {
+  if(this.isOpen === false) {
+    this.isOpen = true;
+    return true;
+  } 
+  if(this.isOpen === true) {
+    this.isOpen = true;
+    return false;
+  }
+};
 
  /* Step 85
  *
