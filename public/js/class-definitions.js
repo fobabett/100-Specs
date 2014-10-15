@@ -912,8 +912,9 @@ var polygon = new Shape(12).getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = new Box("Pandora's Box", false).openBox();
+
+var closeAnOpenBox = new Box("Meow", true).openBox();
 
 
  /* Step 95
